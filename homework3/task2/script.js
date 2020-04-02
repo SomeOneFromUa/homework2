@@ -1016,10 +1016,9 @@ for (const divka of redDiv) {
 
 
 ///////////////////////////////////////////////////////////////////////////////
-//
-//
-//
-// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі users. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт в свій блок (блок в блоці).
+// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі users.
+// За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий
+// об'єкт в блок, при цьому кожен внутрішній об'єкт в свій блок (блок в блоці).
 /*
 let blockOfUsers = document.createElement('div');
 document.body.appendChild(blockOfUsers);
@@ -1096,8 +1095,93 @@ for (const widthElement of width) {
 
 
 
-// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі posts. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці).
-// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі comments. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці).
+// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі posts.
+// За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий
+// об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці).
+/*
+
+let blockOfposts = document.createElement('div');
+document.body.appendChild(blockOfposts);
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(userss=>userss.json())
+    .then(posts => {console.log(posts);
+            for (let object of posts) {
+                ////////ітерація по кожному оюєкту масиву
+
+                let card = document.createElement("div");
+                blockOfposts.appendChild(card);
+                card.style.backgroundColor = 'aqua';
+                card.style.marginBottom = '15px';
+
+                for (const key in object) {
+                    ////// ітерація по ключам обєкта
+                        let divMainTect = document.createElement("div");
+                        divMainTect.innerText = `${key}: ${object[key]}`;
+                        card.appendChild(divMainTect);
+                        console.log(`${key}: ${object[key]}`)
+                    }
+                }
+            }
+    );
+
+let width = document.getElementsByTagName("div");
+for (const widthElement of width) {
+    widthElement.style.width = '350px';
+}
+
+*/
+
+
+
+
+
+// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі comments.
+// За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий
+// об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці).
+/*
+let blockOfcomments = document.createElement('div');
+document.body.appendChild(blockOfcomments);
+
+fetch('https://jsonplaceholder.typicode.com/comments')
+    .then(userss=>userss.json())
+    .then(comments => {console.log(comments);
+            for (let object of comments) {
+                ////////ітерація по кожному оюєкту масиву
+
+                let card = document.createElement("div");
+                blockOfcomments.appendChild(card);
+                card.style.backgroundColor = 'aqua';
+                card.style.marginBottom = '15px';
+
+
+
+                for (const key in object) {
+
+                    let divMainTect = document.createElement("div");
+                    divMainTect.innerText = `${key}: ${object[key]}`;
+                    card.appendChild(divMainTect);
+                    console.log(`${key}: ${object[key]}`)
+                }
+            }
+        }
+
+
+    );
+
+let width = document.getElementsByTagName("div");
+for (const widthElement of width) {
+    widthElement.style.width = '350px';
+}
+
+
+*/
+
+
+
+
+
+
+
 // ****** при помощи fetch (как в примере) получить от jsonplaceholder все posts. Внутри последнего then() сделать еще один fetch который сделает запрос и получит все comments. Объеденить соответсвующий post с соответсвующими comment и вывести в браузер. Подсказка : в каждом comment есть поле postId которое определяет какой комментарий принадлежит какому посту
 //
 
