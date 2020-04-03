@@ -70,6 +70,7 @@ console.log(maxNumber);
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше,
 // а виводить найбільше
 
+
 /*
 function maxAndMin(arr) {
     let max = 0;
@@ -98,6 +99,7 @@ console.log(`min - ${min}`);
 
 
 
+
 // - створити функцію яка виводить масив
 /*
 function arrLog(array) {
@@ -109,8 +111,9 @@ function arrLog(array) {
 
 
 /*
+
 function maxOfArr(array) {
-    let max = 0;
+    let max = array[0];
     for (let i = 0; i < array.length; i++) {
         if (array[i] > max) {
             max = array[i];
@@ -118,12 +121,13 @@ function maxOfArr(array) {
         }
     }return(max);
 }
-let array = [5,7,3,-28,6,8,5,0];
+let array = [-5,7,3,-28,6,8,-5];
 let max = maxOfArr(array);
 console.log(`max - ${max}`);
 
-
 */
+
+
 
 
 
