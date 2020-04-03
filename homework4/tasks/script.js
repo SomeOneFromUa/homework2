@@ -1,10 +1,14 @@
 // - створити функцію яка виводить масив
+
 /*
+function arrLog() {
+	let arr = [];
+	for (const argument of arguments) {
+		arr.push(argument);
+	}console.log(arr);
 
-function arrLog(array) {
-console.log(array);
 }
-
+arrLog(1,3,5,7,3,7,8,3);
 */
 
 
@@ -101,10 +105,17 @@ console.log(`min - ${min}`);
 
 
 // - створити функцію яка виводить масив
+
 /*
-function arrLog(array) {
-    console.log(array);
+function arrLog() {
+	let arr = [];
+	for (const argument of arguments) {
+		arr.push(argument);
+	}return(arr);
+
 }
+let array = arrLog(1,3,5,7,3,7,8,3);
+console.log(array);
 */
 
 // - створити функцію яка повертає найбільше число з масиву
