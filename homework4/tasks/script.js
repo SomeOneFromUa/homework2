@@ -213,9 +213,10 @@ console.log(count);
 
 
 /*
-let arr = ['afafa', true, 'afaf', 3, {name: 'Rue', age: 33, wife: true}, [4,5,'rgrg',78,8],9,'ffg'];
 
-/!*
+let arr = ['afafa', true, 'afaf', 3, {name: 'Rue', age: 33, wife: true}, [4,5,'rgrg',8],9,'ffg'];
+
+
 function numOfField(array, count = 0) {
 	for (const key in array) {
 	count++;
@@ -225,7 +226,7 @@ function numOfField(array, count = 0) {
 	for (const key in array) {
 		if (typeof array[key] ==='object'){
 			let count2 = numOfField(array[key])
-			count = count +count2
+			count += count2
 		}
 	}
 	 return(count);
@@ -236,9 +237,10 @@ let result = numOfField(arr);
 
 
 console.log(result);
-*!/
-
 */
+
+
+
 
 
 
@@ -251,6 +253,7 @@ console.log(result);
 //     [2,3,4,5]
 // результат
 //     [3,5,7,9]
+
 
 /*
 let arr1 = [1,2,3,4];
@@ -265,6 +268,7 @@ function sumOfEllements(arr1, arr2) {
 }
 let array3 = sumOfEllements(arr1, arr2);
 console.log(array3);
+
 */
 
 
@@ -273,8 +277,8 @@ console.log(array3);
 
 
 
-
 // - *** приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
+
 /*
 function moveEllement(array, i) {
 let elemen = array.splice(i,1);
@@ -293,7 +297,9 @@ moveEllement(array, 6 );
 
 
 
+
 // - *** створити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
+
 /*
 function sortZero(array) {
     for (let i = 0; i < array.length; i++) {
@@ -305,8 +311,10 @@ function sortZero(array) {
     }console.log(array);
 }
 let array = [0,7,0,6,8,0,7,0,2,7,3,8,0,7,8,43,7,1];
+console.log(array);
 sortZero(array);
 */
+
 
 // Двожина масиву від 2 до 100
 // Приклад
@@ -353,6 +361,7 @@ append('h1', 'hello world');
 // Для кожної властивості створити всередені блока автомоблія свій блок
 /// в index.html ////
 
+
 /*
 let cars2 = [
     {model: 'Tesla', year: 2015, power: 250, collor: 'black', driver: {name: 'ALina', age: 30, experience: 5}},
@@ -381,7 +390,7 @@ card.classList.add('car');
 				specincule.innerText = `${arrayElementKey} - ${array[arrayKey][arrayElementKey]}`;
 				include.appendChild(specincule)
 			}
-		}else  specification.innerText = `${arrayKey} - ${array[arrayKey]}`
+		}else  specification.innerText = `${arrayKey} - ${array[arrayKey]}`;
 		card.appendChild(specification);
 
 	} return(card);
@@ -402,10 +411,12 @@ appendEllement(cars2, 'carslist');
 
 
 
+
 // (на основі минулого ДЗ)
 // **- функція приймає 2 масиви з рівною кількістю об'єктів та з'єднює в один об'єкт користувача та місто з відповідними "id" та "user_id",
 // та повертає масив цих з'єднаних об'єктів.
 // Приклад масивів:
+
 /*
  let usersWithId = [
      {id: 1, name: 'vasya', age: 31, status: false},
@@ -435,6 +446,7 @@ function completeArray(arr1, arr2) {
 let newarr = completeArray(usersWithId, citiesWithId);
 console.log(newarr);
 */
+
 
 
 
@@ -482,6 +494,7 @@ let rules = [
 		},
 
 ];
+
 /*
 function createBlock(object) {
 	let block = document.createElement("div");
@@ -498,6 +511,7 @@ for (const rule of rules) {
 let block = createBlock(rule);
 wrap.appendChild(block);
 }
-
 */
+
+
 
