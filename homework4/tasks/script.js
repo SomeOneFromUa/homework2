@@ -1,9 +1,11 @@
 // - створити функцію яка виводить масив
+/*
 
 function arrLog(array) {
 console.log(array);
 }
 
+*/
 
 
 // - створити функцію яка заповнює масив рандомними числами та виводить його. Для виведення використати попвередню функцію.
@@ -206,19 +208,33 @@ console.log(count);
 
 
 
-let arr = ['afafa', true, 'afaf', 3, {name: 'Rue', age: 33, wife: true}, [4,5,78,8],6];
+/*
+let arr = ['afafa', true, 'afaf', 3, {name: 'Rue', age: 33, wife: true}, [4,5,'rgrg',78,8],9,'ffg'];
 
-function numOfField(array) {
-
-
+/!*
+function numOfField(array, count = 0) {
+	for (const key in array) {
+	count++;
+		console.log(count + '----');
+		console.log(array[key]);
+	}
+	for (const key in array) {
+		if (typeof array[key] ==='object'){
+			let count2 = numOfField(array[key])
+			count = count +count2
+		}
+	}
+	 return(count);
 }
 
 
 let result = numOfField(arr);
+
+
 console.log(result);
+*!/
 
-
-
+*/
 
 
 
@@ -481,12 +497,3 @@ wrap.appendChild(block);
 
 */
 
-
-// "
-//
-//
-//
-//
-//
-//
-//
