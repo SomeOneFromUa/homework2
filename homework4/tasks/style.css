@@ -1,0 +1,18 @@
+.car    {
+    background-color: #6df6eb;
+    padding: 10px 20px  ;
+    margin: 5px;
+    flex: 0 1 25%
+
+}
+.include {
+    padding: 5px 10px ;
+    margin-top: 5px;
+    background-color: cornflowerblue;
+}
+#carslist {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
