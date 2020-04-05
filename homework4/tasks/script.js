@@ -475,9 +475,9 @@ wrap.appendChild(block);
 /////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 
-/*
+
 let cars2 = [
-	{model: 'Tesla', year: 2015, power: 250, collor: 'black', driver: {name: 'ALina', age: 30, experience: 5}},
+    {model: 'Tesla', year: 2015, power: 250, collor: 'black', driver: {name: 'ALina', age: 30, experience: 5}},
 	{model: 'A8', year: 2000, power: 300, collor: 'wjite', driver: {name: 'Oleg', age: 25, experience: 8}},
 	{model: 'Civik', year: 2019, power: 280, collor: 'grey', driver: {name: 'Bogdan', age: 22, experience: 2}},
 	{model: 'Charger', year: 2010, power: 250, collor: 'metalic', driver: {name: 'Rue', age: 28, experience: 5}},
@@ -488,8 +488,6 @@ let cars2 = [
 	{model: 'MSport', year: 2005, power: 200, collor: 'white', driver: {name: 'Karina', age: 29, experience: 5}},
 	{model: 'Cybertrack', year: 2020, power: 400, collor: 'grey', driver: {name: 'Jeck', age: 19, experience: 1}},
 ];
-*/
-
 
 /*
 function cardCreator(array) {
@@ -521,6 +519,60 @@ function appendEllement(array, identify){
 }
 
 appendEllement(cars2, 'carslist');*/
+///////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+/*
+let field = document.getElementById('carslist');
+
+
+
+function cardCreator(array, location) {
+    let card = document.createElement("div");
+    card.style.backgroundColor = 'aqua';
+    location.appendChild(card);
+    for (const arrayKey in array) {
+
+        let content = document.createElement("div");
+        content.innerText= `${arrayKey} - ${array[arrayKey]}`
+        card.appendChild(content);
+    }
+}
+
+
+
+///якщо є тільки обєкти в обєктах - то iteratorMass - не потрібен
+function iterator3000(array) {
+    for (const arrayKey in array) {
+
+        if (typeof array[arrayKey]==='object' && !Array.isArray(array[arrayKey])) {
+            cardCreator(array[arrayKey], field);
+            console.log(arrayKey);
+            iterator3000(array[arrayKey]);
+
+
+
+
+        }else if (Array.isArray(array[arrayKey])){
+            console.log(arrayKey);
+            iteratorMass(array[arrayKey])
+        }else console.log(`${arrayKey}	- ${array[arrayKey]}`);
+    }
+}
+iterator3000(cars2);
+*/
+
+/*
+function iteratorMass(array) {
+    for (const arrayElement of array) {
+        if (Array.isArray(arrayElement)){
+            iteratorMass(arrayElement)
+        }else if (typeof arrayElement==='object'){
+            iterator3000(arrayElement)
+        }else console.log(arrayElement);
+
+    }
+
 
 
 ////////////////////////////////////////////////////////////////
@@ -528,24 +580,34 @@ appendEllement(cars2, 'carslist');*/
 ////////////////////Універсальний ітератор//////////////////////
 ////////////////////////////////////////////////////////////////
 
+
 /*
 function iteratorMass(array) {
-	for (const arrayElement of array) {
-		console.log(arrayElement);
-	}
+    for (const arrayElement of array) {
+        if (Array.isArray(arrayElement)){
+            iteratorMass(arrayElement)
+        }else if (typeof arrayElement==='object'){
+            iterator3000(arrayElement)
+        }else console.log(arrayElement);
+
+    }
+
 }
+///якщо є тільки обєкти в обєктах - то iteratorMass - не потрібен
 function iterator3000(array) {
-	for (const arrayKey in array) {
-		if (typeof array[arrayKey]==='object' && !Array.isArray(array[arrayKey])) {
-			console.log(arrayKey);
-			iterator3000(array[arrayKey]);
-			}else if (Array.isArray(array[arrayKey])){
-			iteratorMass(array[arrayKey])
-		}else console.log(`${arrayKey}	- ${array[arrayKey]}`);
-		}
-	}
-iterator3000(mass);
+    for (const arrayKey in array) {
+        if (typeof array[arrayKey]==='object' && !Array.isArray(array[arrayKey])) {
+            console.log(arrayKey);
+            iterator3000(array[arrayKey]);
+        }else if (Array.isArray(array[arrayKey])){
+            console.log(arrayKey);
+            iteratorMass(array[arrayKey])
+        }else console.log(`${arrayKey}	- ${array[arrayKey]}`);
+    }
+}
+iterator3000(cars2);
 */
+
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
