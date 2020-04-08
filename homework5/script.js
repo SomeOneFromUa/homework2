@@ -219,6 +219,7 @@ car.info();
 
 
 
+
 /*
 function Cars(model, firm, year, maxSpeed, engine, ) {
 this.model = model;
@@ -231,9 +232,8 @@ this.drive = function () {
 };
 this.info = function () {
     for (const key in this) {
-        if (typeof this[key] === 'function' || typeof this[key] === 'object'){
-            
-        }else console.log(`${key} - ${this[key]}`)
+        if (typeof this[key] !== 'function' && typeof this[key] !== 'object')
+            console.log(`${key} - ${this[key]}`)
 
     }
     for (const key in this.driver) {
@@ -285,6 +285,7 @@ car.info();
 
 
 
+
 /*
 class Cars {
     constructor(model, firm, year, maxSpeed, engine) {
@@ -301,9 +302,8 @@ class Cars {
 
     info() {
         for (const key in this) {
-            if (typeof this[key] === 'object') {
-
-            } else console.log(`${key} - ${this[key]}`)
+            if (typeof this[key] !== 'object')
+            console.log(`${key} - ${this[key]}`)
 
         }
         for (const key in this.driver) {
@@ -354,6 +354,7 @@ car.info();
 
 
 
+
 /*
 class Cinderellas {
     constructor(name, age, footsize) {
@@ -361,8 +362,8 @@ class Cinderellas {
         this.age = age;
         this.footsize = footsize;
     }
-    add(){
-       array.push(this);
+    add(arr){
+       arr.push(this);
 }
 
 }
@@ -387,25 +388,25 @@ class Prince {
 
 let array = [];
 let Alina = new Cinderellas('alina', 20, 35);
-Alina.add();
+Alina.add(array);
 let Emilly = new Cinderellas('Emilly', 21, 34);
-Emilly.add();
+Emilly.add(array);
 let Hazel = new Cinderellas('Hazel', 22, 38);
-Hazel.add();
+Hazel.add(array);
 let Bridget = new Cinderellas('Bridget', 20, 36);
-Bridget.add();
+Bridget.add(array);
 let Karina = new Cinderellas('Karina', 28, 39);
-Karina.add();
+Karina.add(array);
 let Anna = new Cinderellas('Anna', 18, 35);
-Anna.add();
+Anna.add(array);
 let Eliza = new Cinderellas('Eliza', 20, 34);
-Eliza.add();
+Eliza.add(array);
 let Fiona = new Cinderellas('Fiona', 21, 40);
-Fiona.add();
+Fiona.add(array);
 let Ivi = new Cinderellas('Ivi', 25, 36);
-Ivi.add();
+Ivi.add(array);
 let Amirah = new Cinderellas('Amirah', 20, 34);
-Amirah.add();
+Amirah.add(array);
 
 console.log(array);
 
@@ -413,6 +414,7 @@ let John = new Prince('John',30, 38);
 John.findCinderella();
 console.log(John);
 */
+
 // ==============================================
 
 
@@ -427,14 +429,14 @@ console.log(John);
 // -- функція повинна приймати масив попелюшок, та шукає ту котра йому підходить
 
 
-/*
+
 
 function Cinderellas(name, age, footsize){
     this.name = name;
     this.age = age;
     this.footsize = footsize;
-    this.add = function () {
-        array.push(this);
+    this.add = function (arr) {
+        arr.push(this);
     }
 }
 function Prince (name, age, shoesize){
@@ -457,25 +459,25 @@ function Prince (name, age, shoesize){
 
 let array = [];
 let Alina = new Cinderellas('alina', 20, 35);
-Alina.add();
+Alina.add(array);
 let Emilly = new Cinderellas('Emilly', 21, 34);
-Emilly.add();
+Emilly.add(array);
 let Hazel = new Cinderellas('Hazel', 22, 38);
-Hazel.add();
+Hazel.add(array);
 let Bridget = new Cinderellas('Bridget', 20, 36);
-Bridget.add();
+Bridget.add(array);
 let Karina = new Cinderellas('Karina', 28, 39);
-Karina.add();
+Karina.add(array);
 let Anna = new Cinderellas('Anna', 18, 35);
-Anna.add();
+Anna.add(array);
 let Eliza = new Cinderellas('Eliza', 20, 34);
-Eliza.add();
+Eliza.add(array);
 let Fiona = new Cinderellas('Fiona', 21, 40);
-Fiona.add();
+Fiona.add(array);
 let Ivi = new Cinderellas('Ivi', 25, 36);
-Ivi.add();
+Ivi.add(array);
 let Amirah = new Cinderellas('Amirah', 20, 34);
-Amirah.add();
+Amirah.add(array);
 
 console.log(array);
 
@@ -483,7 +485,6 @@ let John = new Prince('John',30, 40);
 John.findCinderella();
 console.log(John);
 
-*/
 
 
 // ==============================================
