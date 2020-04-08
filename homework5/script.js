@@ -260,8 +260,50 @@ car.increaseMaxSpeed(20);
 car.addDriver({name: 'Oleg', age: 33});
 car.info();
 */
+////////////////////////////////////////////////////////////////////
+//////////////////інфо з рекурсією//////////////////////////////////
+////////////////////////////////////////////////////////////////////
+/*
+function Cars(model, firm, year, maxSpeed, engine, ) {
+    this.model = model;
+    this.firm = firm;
+    this.year = year;
+    this.maxSpeed = maxSpeed;
+    this.engine = engine;
+    this.drive = function () {
+        console.log(`їдемо зі швидкістю ${this.maxSpeed} км на годину`);
+    };
+    this.info = function (object = this) {
+        for (const key in object) {
+            if (typeof object[key] !== 'function' && typeof object[key] !== 'object') {
+                console.log(`${key} - ${object[key]}`)
+            }else if (typeof object[key] === 'object'){
+                this.info(object[key])
+            }
 
+        }
 
+    };
+    this.increaseMaxSpeed = function (newSpeed) {
+        this.maxSpeed+=newSpeed;
+    };
+    this.changeYear = function (year) {
+        this.year = year;
+    };
+    this.addDriver = function (driver) {
+        this.driver = driver;
+    }
+
+}
+
+let car = new Cars('A8','audi','2015', 300, 4);
+console.log(car);
+car.drive();
+car.changeYear(2020);
+car.increaseMaxSpeed(20);
+car.addDriver({name: 'Oleg', age: 33});
+car.info();
+*/
 
 // ==============================================
 
@@ -335,7 +377,97 @@ car.addDriver({name: 'Alex', age: 55});
 car.info();
 */
 
+
+//////////////////////////////////////////////////////
+///////інфо з рекурсією///////////////////////////////
+//////////////////////////////////////////////////////
+/*
+class Cars {
+    constructor(model, firm, year, maxSpeed, engine) {
+        this.model = model;
+        this.firm = firm;
+        this.year = year;
+        this.maxSpeed = maxSpeed;
+        this.engine = engine;
+    }
+
+    drive() {
+        console.log(`їдемо зі швидкістю ${this.maxSpeed} км на годину`);
+    };
+
+    info(object = this) {
+        for (const key in object) {
+            if (typeof object[key] !== 'object'){
+                console.log(`${key} - ${object[key]}`)
+        } else this.info(object[key]);
+    }
+        };
+
+    increaseMaxSpeed(newSpeed) {
+        this.maxSpeed += newSpeed;
+    };
+
+    changeYear(year) {
+        this.year = year;
+    };
+
+    addDriver (driver) {
+        this.driver = driver;
+    }
+
+
+}
+
+let car = new Cars('A9','audi','2018', 320, 4);
+console.log(car);
+car.drive();
+car.changeYear(2020);
+car.increaseMaxSpeed(30);
+car.addDriver({name: 'Alex', age: 55});
+car.info();
+*/
+
 // ==============================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -431,6 +563,7 @@ console.log(John);
 
 
 
+/*
 function Cinderellas(name, age, footsize){
     this.name = name;
     this.age = age;
@@ -479,12 +612,13 @@ Ivi.add(array);
 let Amirah = new Cinderellas('Amirah', 20, 34);
 Amirah.add(array);
 
-console.log(array);
+console.log(array); 
 
 let John = new Prince('John',30, 40);
 John.findCinderella();
 console.log(John);
 
+*/
 
 
 // ==============================================
