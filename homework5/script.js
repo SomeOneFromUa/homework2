@@ -218,8 +218,9 @@ car.info();
 
 
 
+
 /*
-function cars(model, firm, year, maxSpeed, engine, ) {
+function Cars(model, firm, year, maxSpeed, engine, ) {
 this.model = model;
 this.firm = firm;
 this.year = year;
@@ -251,7 +252,7 @@ this.driver = driver;
 
 }
 
-let car = new cars('A8','audi','2015', 300, 4);
+let car = new Cars('A8','audi','2015', 300, 4);
 console.log(car);
 car.drive();
 car.changeYear(2020);
@@ -259,6 +260,7 @@ car.increaseMaxSpeed(20);
 car.addDriver({name: 'Oleg', age: 33});
 car.info();
 */
+
 
 
 // ==============================================
@@ -282,8 +284,9 @@ car.info();
 
 
 
+
 /*
-class cars {
+class Cars {
     constructor(model, firm, year, maxSpeed, engine) {
         this.model = model;
         this.firm = firm;
@@ -323,7 +326,7 @@ class cars {
 
 }
 
-let car = new cars('A9','audi','2018', 320, 4);
+let car = new Cars('A9','audi','2018', 320, 4);
 console.log(car);
 car.drive();
 car.changeYear(2020);
@@ -331,6 +334,7 @@ car.increaseMaxSpeed(30);
 car.addDriver({name: 'Alex', age: 55});
 car.info();
 */
+
 // ==============================================
 
 
