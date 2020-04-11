@@ -191,21 +191,31 @@ return a.id - b.id;
 
 
 // -- наисать функцию калькулятора с 2мя числами и колбеком
-function calculate(a,b, callback){
-    callback(a,b);
-    
+/*
+function calc (a,b, callback){
+    console.log(callback(a,b));
 }
-calculate(4,6,function (a,b) {
-return a+b;
+calc(5,6,function (a,b) {
+    return a+b;
+
 });
-
-
-
+*/
 
 
 
 // -- наисать функцию калькулятора с 3мя числами и колбеком
-//
+/*
+function calc2 (a,b,c, callback){
+    console.log(callback(a, b, c));
+}
+function action(a,b,c){
+    return a+b+c;
+}
+calc2(3, 6,7, action);
+*/
+
+
+
 // =============================================
 // =============================================
 // =============КЛАССНАЯ РАБОТА=================
@@ -688,6 +698,7 @@ expRevision(carArr);
 
 
 
+
 /*
 let array = [];
 function RandomArr(array, length, min, max) {
@@ -698,6 +709,8 @@ function RandomArr(array, length, min, max) {
 }
 RandomArr(array, 10,1,10);
 console.log(array);
+
+
 
 
 function result(arr, elementKey) {
