@@ -627,7 +627,7 @@ let count = 0;
         array[i].owner = 'free';
         count++;
     }
-console.log(`вільних авто ${count}`);
+console.log(`відремонтовано ${count} авто`);
 }
 Upgrade(carArr,10,5,2);
 
@@ -649,8 +649,8 @@ let driver15 = new Drivers('new driver Amelia',30,5,'null');
 driver15.toCarInArr(carArr);
 let driver16 = new Drivers('new driver Rue',52,10,'null');
 driver16.toCarInArr(carArr);
-
-
+////новачкам автоматично присвоюється машина і автоматично заповнюється
+// поле carID відповідно до машини
 
 
 // Після того зробити перевірку досвіду ВСІХ наших водіїв. Якщо досвід водія менший за 5 років, але його вік більший за 25, то необідно відправити його на курси підвищення кваліфікації, що збільшить йому досвід на 1 рік.
@@ -660,6 +660,7 @@ function expRevision(array) {
         if (arrayElement.owner === 'free') continue;
         if (arrayElement.owner.experience < 5 && arrayElement.owner.age > 25) {
             arrayElement.owner.experience++;
+            console.log(`курси пройшов:`);
         console.log(arrayElement.owner);
         }
 
@@ -668,10 +669,9 @@ function expRevision(array) {
 }
 expRevision(carArr);
 
-
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
- */
+*/
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -700,6 +700,7 @@ expRevision(carArr);
 
 
 /*
+
 let array = [];
 function RandomArr(array, length, min, max) {
     for (let i = 0; i < length ; i++) {
@@ -724,3 +725,4 @@ console.log(`Key = ${elementKey} --- MaxIndex = ${Math.max(...arrOfIndex)}, MinI
 }
 result(array,4);
 */
+
