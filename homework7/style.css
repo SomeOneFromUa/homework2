@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.head {
+    display: flex;
+    justify-content: start;
+    background-color: lightsalmon;
+}
+.menu {
+    background-color: cadetblue;
+    width: 150px;
+    padding: 10px 5px;
+    position: absolute;
+    left: -160px;
+    transition: 0.5s;
+}
+.menu_btn:hover {
+    cursor: pointer;
+}
+.menu li {
+    padding: 10px 0;
+    border-bottom: solid 1px white;
+    color: white;
+}
+.menu_btn {
+    background-color: darkcyan;
+    height: 30px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 25px;
+}
+.menu_move {
+    left: 0px;
+}
+.commentnone {
+    display: none;
+}
+
+
+
+
+
+
+
+
+.main {
+
+    background-color: cornflowerblue;
+}
+.main >div {
+    border: solid 2px white;
+   padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.comBtn {
+    background-color: gray;
+    color: white;
+    width: 100px;
+    text-align: center;
+}
+.comText {
+    padding: 10px 5px;
+}
+.comTitle {
+    font-size: 22px;
+
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.item2 {
+    padding: 20px;
+}
+.forms {
+    display: flex;
+
+}
+.forms_btn {
+    width: 100px;
+}
+table, td,  th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td {
+    padding: 10px;
+}
+
+
+
+
+
+img {
+    width: 400px;
+}
+.border {
+    height: 250px;
+    position: relative;
+    width: 400px;
+    overflow: hidden;
+}
+.slider {
+    transition: 1s;
+    position: absolute;
+    left: 0;
+
+    display: flex;
+    flex-wrap: nowrap;
+}
+.block_slider {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+.letf, .right {
+    height: 100px;
+    width: 50px;
+    background-color: black;
+}
+
+
+
+
+
+
+.none {
+    display: none;
+}
