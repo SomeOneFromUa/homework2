@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        fieldset {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .none {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="task3 none" style='width: 300px'>
+    <form action="" name="form" id="form1">
+        <fieldset>
+            <legend>fields</legend>
+            <label for="">name</label>
+            <input type="text" name="name" >
+            <label for="">age</label>
+            <input type="number" name="num">
+            <label for="">comment</label>
+            <textarea name="text" id="" cols="30" rows="5"></textarea>
+        </fieldset>
+        <fieldset id="sex">
+            <legend>sex</legend>
+            <label for="">male</label>
+            <input type="radio" name="sex" value="male">
+            <label for="">female</label>
+            <input type="radio" name="sex" value="female">
+            <label for="">other</label>
+            <input type="radio" name="sex" value="other">
+        </fieldset>
+        <fieldset id="skills">
+            <legend>skills</legend>
+            <label for="">java</label>
+            <input type="checkbox" name="skill1" value="java">
+            <label for="">c++</label>
+            <input type="checkbox" name="skill2" value="c++">
+            <label for="">js</label>
+            <input type="checkbox" name="skil3" value="js">
+            <label for="">Pyton</label>
+            <input type="checkbox" name="skil4" value="pyton">
+        </fieldset>
+        <fieldset id="selector">
+            <legend>selector</legend>
+            <select name="selector" multiple>
+                <option value="option1" name="option1" value="option1">option1</option>
+                <option value="option2" name="option2" value="option2">option2</option>
+                <option value="option3" name="option3" value="option3">option3</option>
+                <option value="option4" name="option4" value="option4">option4</option>
+            </select>
+        </fieldset>
+    </form>
+</div>
+
+
+<div id="task4" class="none">
+    <div>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+
+    </div>
+    <div>
+        <button id="left"> < </button>
+        <button id="right"> > </button>
+        <button id="save">save changes</button>
+        <button id="delete">delete history</button>
+    </div>
+</div>
+<div id="task5" class="none">
+    <form action="" name="form2" style="width: 300px">
+        <fieldset>
+            <legend>user</legend>
+            <label for="">ФИО</label>
+        <input type="text" name="name" required>
+            <label for="">номер</label>
+        <input type="number" name="phone" required>
+            <label for="">почта</label>
+        <input type="email" name="email">
+            <label for="">фирма</label>
+        <input type="text" name="interprise">
+            <label for="">отдел</label>
+        <input type="text" name="viddil">
+            <label for="">день рождения</label>
+        <input type="text" name="birth">
+            <button id="saveIn">save</button>
+        </fieldset>
+    </form>
+    <div class="contacts"  style="width: 300px">
+        <fieldset>
+            <legend>contats</legend>
+            <ul id="list">
+            </ul>
+        </fieldset>
+    </div>
+
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
