@@ -29,6 +29,7 @@ text.oninput = ()=>{
 
 
 
+
 /*
 let task3 = document.querySelector('.task3');
 task3.style.display = 'block';
@@ -119,6 +120,7 @@ saveOption(selector);
 
 /*
 
+
 let div = document.getElementById('task4');
 div.style.display = 'block';
 
@@ -155,13 +157,14 @@ console.log(arr);
 btn.onclick = (ev)=>{
 count++;
     arr[count]=area.value;
+    ///перевірка на повтори
+    if (arr[count] === arr[count-1]) {arr.splice(count,1); count-=1}
 console.log(arr);
 move =arr.length-1;
 localStorage.setItem('arr',`${JSON.stringify(arr)}`);
 
     localStorage.setItem('current', `${area.value}`);
 };
-
 
 
 back.onclick = ()=>{
@@ -212,9 +215,6 @@ del.onclick = ()=>{
 
 
 
-
-
-
 // - Реализуйте записную книгу, хранящую данные в локальном хранилище.
 //     Данные которые надо сохранять : ФИО, номер, почта, фирма, отдел,
 //     день рождения
@@ -223,6 +223,7 @@ del.onclick = ()=>{
 // --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется
 // форма, в которой есть все необходимые инпуты для редактирования, которые уже
 // заполнены данными объекта
+
 
 
 
@@ -238,6 +239,8 @@ let textarea = document.querySelectorAll('input[type=text]');
 let numbers = document.querySelectorAll('input[type=number]');
 let mail = document.querySelectorAll('input[type=email]');
 let ul = document.getElementById('list');
+
+
 
 
 saveBtn.onclick = (ev)=>{
@@ -289,6 +292,7 @@ li.appendChild(del)
 
 
 let delUser = document.getElementsByClassName('del');
+
 console.log(delUser);
 for (const btn of delUser) {
    btn.onclick = ()=>{
@@ -299,6 +303,7 @@ for (const btn of delUser) {
 }
 
 let editUser = document.getElementsByClassName('edit');
+
 console.log(editUser);
 for (const btn of editUser) {
     btn.onclick = ()=>{
@@ -312,7 +317,8 @@ for (const btn of editUser) {
     }
 
 }
-
 */
+
+
 
 
