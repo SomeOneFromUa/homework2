@@ -30,6 +30,7 @@ text.oninput = ()=>{
 
 
 
+
 /*
 let task3 = document.querySelector('.task3');
 task3.style.display = 'block';
@@ -97,12 +98,14 @@ function saveOption(collection) {
             localStorage.setItem(`${element.name}`, `${element.value}`)
         };
         let item = localStorage.getItem(`${element.name}`);
+        if (item === null) return;
         element.options[item].selected = true
     }
 }
 saveOption(selector);
 
 */
+
 
 
 
@@ -241,19 +244,32 @@ let mail = document.querySelectorAll('input[type=email]');
 let ul = document.getElementById('list');
 
 
+let index;
+if (localStorage.getItem('index') ==='' || null ) {
+    index=0
+}else index = +(localStorage.getItem('index'));
 
 
 saveBtn.onclick = (ev)=>{
     function saveUser() {
+
         let user = {};
         for (const argument of arguments) {
             for (const element of argument) {
+
                 user[`${element.name}`] = `${element.value}`;
-                argument.value = '';
+
+
             }
         }
-        nick = document.forms.form2.name.value;
-        localStorage.setItem(`${nick}`, JSON.stringify(user));
+
+        if (document.forms.form2.name.value === '' || document.forms.form2.phone.value === '' || document.forms.form2.email.value === '' ) return;///костиль на випадок якщо поля пусті...
+
+
+        if (index === '') index= +index +1; ///перевірка чи існує користувач
+        localStorage.setItem('index', `${index}`);
+        user.index = index;
+        localStorage.setItem(`${index}`, JSON.stringify(user));
     }
     saveUser(textarea,numbers,mail);
     
@@ -261,64 +277,66 @@ saveBtn.onclick = (ev)=>{
 
 
 
-
+////створення контакту
 for (let i = 0; i < localStorage.length; i++) {
-
 let key = localStorage.key(i);
+if (key==='index') continue;
 let user = JSON.parse(localStorage.getItem(key));
     console.log(user);
 
 
 let li = document.createElement("li");
 li.innerText = `${user.name} - ${user.phone}`;
-li.setAttribute('name', `${user.name}`);
+li.setAttribute('name', `${user.index}`);
 ul.appendChild(li);
 
 
 let edit = document.createElement('button');
 edit.innerText = 'edit';
-edit.setAttribute('name', `${user.name}`);
+edit.setAttribute('name', `${user.index}`);
 edit.classList.add('edit');
 li.appendChild(edit);
 
 
 let del = document.createElement('button');
 del.classList.add('del');
-del.setAttribute('name', `${user.name}`);
+del.setAttribute('name', `${user.index}`);
 del.innerText = 'delete';
 li.appendChild(del)
 
 }
+//////
+
+
 
 
 let delUser = document.getElementsByClassName('del');
 
-console.log(delUser);
 for (const btn of delUser) {
    btn.onclick = ()=>{
        localStorage.removeItem(`${btn.name}`);
-       let lis = document.querySelector(`li[name=${btn.name}]`);
+       let lis = document.querySelector(`li[name="${btn.name}"]`);
        lis.style.display = 'none';
+
    }
 }
 
+
+
+
 let editUser = document.getElementsByClassName('edit');
 
-console.log(editUser);
 for (const btn of editUser) {
-    btn.onclick = ()=>{
+    btn.onclick = () => {
         let user = JSON.parse(localStorage.getItem(`${btn.name}`));
-        document.forms.form2.name.value = user.name;
-        document.forms.form2.phone.value = user.phone;
-        document.forms.form2.email.value = user.email;
-        document.forms.form2.interprise.value = user.interprise;
-        document.forms.form2.viddil.value = user.viddil;
-        document.forms.form2.birth.value = user.birth;
+        for (const userKey in user) {
+            document.forms.form2[userKey].value = user[userKey];
+        }
+
     }
-
 }
-*/
 
+*/
 
 
 
