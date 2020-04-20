@@ -3,6 +3,7 @@
 //     Сделайте так, чтобы после захода на эту страницу через некоторое время,
 //     введенный текст остался в textarea.
 
+
 /*
 let text = document.createElement('textarea');
 document.body.appendChild(text);
@@ -18,6 +19,7 @@ text.oninput = ()=>{
 
 
 
+
 // - Дана форма с инпутами, текстареа, чекбоксами, радио кнопочками, селектами и тп.
 //     Пользователь вводит какие-то данные и закрывает страницу (не факт, что он
 //     заполнил всю форму).
@@ -27,11 +29,8 @@ text.oninput = ()=>{
 
 
 
-
-
-
-
 /*
+
 let task3 = document.querySelector('.task3');
 task3.style.display = 'block';
 let form = document.forms.form;
@@ -103,8 +102,8 @@ function saveOption(collection) {
     }
 }
 saveOption(selector);
-
 */
+
 
 
 
@@ -122,7 +121,6 @@ saveOption(selector);
 
 
 /*
-
 
 let div = document.getElementById('task4');
 div.style.display = 'block';
@@ -200,8 +198,8 @@ del.onclick = ()=>{
     count = -1;
 };
 
-
 */
+
 
 
 
@@ -230,8 +228,8 @@ del.onclick = ()=>{
 
 
 
-
 /*
+
 let div = document.getElementById('task5');
 div.style.display = 'block';
 
@@ -266,10 +264,11 @@ saveBtn.onclick = (ev)=>{
         if (document.forms.form2.name.value === '' || document.forms.form2.phone.value === '' || document.forms.form2.email.value === '' ) return;///костиль на випадок якщо поля пусті...
 
 
-        if (index === '') index= +index +1; ///перевірка чи існує користувач
-        localStorage.setItem('index', `${index}`);
+        if (user.index === '') index= +index +1; ///перевірка чи існує користувач
         user.index = index;
+        localStorage.setItem('index', `${index}`);
         localStorage.setItem(`${index}`, JSON.stringify(user));
+
     }
     saveUser(textarea,numbers,mail);
     
@@ -335,8 +334,9 @@ for (const btn of editUser) {
 
     }
 }
-
 */
+
+
 
 
 
