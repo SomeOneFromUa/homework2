@@ -18,9 +18,9 @@ transitionLimit,
 function logoperation(type, change) {
     function render(number){
         if (number<10){
-            let newnumber='0'+number;
-            return newnumber
-        }else return number
+            return '0'+number;
+        }
+        return number
     }
 
     let h = new Date();
