@@ -79,11 +79,11 @@ return {
 
 
 
+
 /*
 let card1 = userCard(1);
 
 card1.putCredits(150);
-
 card1.setTransitionLimit(5000);
 let card2 = userCard(2);
 card1.transferCredits(200,card2);
@@ -94,7 +94,9 @@ console.log(card2.getCardOptions());
 console.log(card2);
 */
 
+
 console.log('---------------------------------------------');
+
 
 
 class UserAccount {
