@@ -228,7 +228,7 @@ del.onclick = ()=>{
 
 
 
-/*
+
 
 let div = document.getElementById('task5');
 div.style.display = 'block';
@@ -334,7 +334,7 @@ for (const btn of editUser) {
 
     }
 }
-*/
+
 
 
 

@@ -1,4 +1,5 @@
 /*
+
 // - создать массив с 20 числами.
 let array = [2,1,6,8,38,4,3,57,2,7,555,2,100,6,10,1,87,2,7,9];
 
@@ -57,6 +58,7 @@ console.log(array);
 console.log(arrX3);
 
 */
+
 ///////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -161,6 +163,7 @@ console.log(arrFalling);
 // - пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний індентифікатор (По якому принципу його створювати - ваше рішення), та зберегти це в новий масив (первинний масив залишиться без змін)
 
 /*
+
 function deepcopy(array, target){
     for (const arrayElement of array) {
         if (typeof arrayElement === "object"){
@@ -172,6 +175,7 @@ function deepcopy(array, target){
 
 let usersCopy = [];
 deepcopy(users,usersCopy);
+
 usersCopy.map(value => value.id = Math.floor(Math.random()*(1000-100)+100));
 console.log(users);
 console.log(usersCopy);
@@ -179,6 +183,7 @@ console.log(usersCopy);
 usersCopy.sort(function (a,b) {
 return a.id - b.id;
 });
+
 */
 
 
@@ -190,14 +195,16 @@ return a.id - b.id;
 
 
 // -- наисать функцию калькулятора с 2мя числами и колбеком
+
 /*
 function calc (a,b, callback){
-    console.log(callback(a,b));
+   return  callback(a,b);
 }
-calc(5,6,function (a,b) {
+let result = calc(5,6,function (a,b) {
     return a+b;
 
 });
+console.log(result);
 */
 
 
@@ -698,8 +705,9 @@ expRevision(carArr);
 
 
 
-/*
 
+
+/*
 let array = [];
 function RandomArr(array, length, min, max) {
     for (let i = 0; i < length ; i++) {
@@ -723,5 +731,6 @@ console.log(arrOfIndex);
 console.log(`Key = ${elementKey} --- MaxIndex = ${Math.max(...arrOfIndex)}, MinIndex = ${Math.min(...arrOfIndex)}`)
 }
 result(array,4);
+
 */
 

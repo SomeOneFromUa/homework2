@@ -601,7 +601,7 @@ let Bridget = new Cinderellas('Bridget', 20, 36);
 Bridget.add(array);
 let Karina = new Cinderellas('Karina', 28, 39);
 Karina.add(array);
-let Anna = new Cinderellas('Anna', 18, 35);
+let Anna = new Cinderellas('Anna', 18, 35);d
 Anna.add(array);
 let Eliza = new Cinderellas('Eliza', 20, 34);
 Eliza.add(array);
@@ -619,7 +619,4 @@ John.findCinderella();
 console.log(John);
 
 */
-
-
 // ==============================================
-//

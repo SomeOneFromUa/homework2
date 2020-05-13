@@ -326,6 +326,8 @@ createmenu(arrayOfH2,ulMenu );
 
 
 
+/*
+
 // -- взять массив пользователей
 let usersWithAddress = [
      {id:1,name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
@@ -348,7 +350,7 @@ let usersWithAddress = [
 
 
 
-/*
+
 
 let div = document.querySelector('.task8');
 div.style.display = 'block';
@@ -388,7 +390,9 @@ let button = document.forms.filter.filterRes;
 let button2 = document.forms.filter.restore;
 button.onclick = ()=>{filterf(usersWithAddress)};
 button2.onclick = ()=>{addcontent(usersWithAddress, target)};
+
 */
+
 
 
 
